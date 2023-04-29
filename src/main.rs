@@ -19,7 +19,7 @@ async fn main() {
 
     let mut game_over = false;
 
-    // 2x2 array to keep track of all positions -> board state
+    // 3x3 array to keep track of all positions -> board state
     let mut board_state: [[i8; SQUARES as usize]; SQUARES as usize] = [[0; SQUARES as usize]; SQUARES as usize];
 
     // Status message that will be displayed
