@@ -9,7 +9,7 @@ This was written as a final project for a university course - Algorithms of Arti
 It is written in [Rust](https://www.rust-lang.org/) utilizing [macroquad](https://github.com/not-fl3/macroquad) gaming library.
 
 
-## Prequisites
+## Prerequisite
   * Rust development environment. Instructions can be found [here](https://www.rust-lang.org/tools/install)
   
   
@@ -27,6 +27,7 @@ It is written in [Rust](https://www.rust-lang.org/) utilizing [macroquad](https:
     ```
     
     Instructions for other platforms can be found [here](https://github.com/not-fl3/macroquad#windows)
+
 
 ## Build Instructions
   ### Clone this repository
