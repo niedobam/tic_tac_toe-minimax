@@ -280,7 +280,7 @@ pub fn render_shapes(board_state: &[[i8; SQUARES as usize]; SQUARES as usize]) {
     }
 }
 
-// Helper function for displaying line through wineers positions
+// Helper function for displaying line through winner positions
 fn get_winner_line_indices(board_state: &[[i8; SQUARES as usize]; SQUARES as usize]) -> Option<WinnerLineIndices> {
 
     let mut final_indices: WinnerLineIndices = WinnerLineIndices {
