@@ -10,7 +10,23 @@ It is written in [Rust](https://www.rust-lang.org/) utilizing [macroquad](https:
 
 
 ## Prequisites
-Rust development environment. Instructions can be found [here](https://www.rust-lang.org/tools/install)
+  * Rust development environment. Instructions can be found [here](https://www.rust-lang.org/tools/install)
+  
+  
+  * macroquad dependencies:
+    #### Linux
+    ```
+    # ubuntu system dependencies
+    apt install pkg-config libx11-dev libxi-dev libgl1-mesa-dev libasound2-dev
+
+    # fedora system dependencies
+    dnf install libX11-devel libXi-devel mesa-libGL-devel alsa-lib-devel
+
+    # arch linux system dependencies
+    pacman -S pkg-config libx11 libxi mesa-libgl alsa-lib
+    ```
+    
+    Instructions for other platforms can be found [here](https://github.com/not-fl3/macroquad#windows)
 
 ## Build Instructions
   ### Clone this repository
