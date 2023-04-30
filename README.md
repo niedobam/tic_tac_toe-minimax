@@ -17,7 +17,7 @@ It is written in [Rust](https://www.rust-lang.org/) utilizing [macroquad](https:
     #### Linux
     ```
     # ubuntu system dependencies
-    apt install pkg-config libx11-dev libxi-dev libgl1-mesa-dev libasound2-dev
+    apt install pkg-config libx11-dev libxi-dev libgl1-mesa-dev libasound2-dev build-essential
 
     # fedora system dependencies
     dnf install libX11-devel libXi-devel mesa-libGL-devel alsa-lib-devel
