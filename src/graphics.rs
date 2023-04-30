@@ -4,7 +4,7 @@ use crate::game::{SQUARES, WIN_CONDITION};
 use crate::ai::is_terminal_state;
 
 // Constants modifying graphics window parameters
-pub const SQUARE_SIZE: u16 = 250;
+pub const SQUARE_SIZE: u16 = 225;
 pub const UI_OFFSET: u16 = 400;
 pub const CIRCLE_RADIUS: u16 = SQUARE_SIZE / 2 - 40;
 pub const WINDOW_SIZE: u32 = SQUARES as u32 * SQUARE_SIZE as u32;
@@ -84,10 +84,11 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
 
     let message2: &str = "Game State:";
     let font_size2 = 50.;
+    let text_size2 = measure_text(message2, None, font_size2 as _, 1.0);
     draw_text(
         message2,
         screen_width() - UI_OFFSET as f32 / 2. - text_size1.width / 2.,
-        screen_height() - 530.,
+        text_size1.height + 150.,
         font_size2,
         BLACK,
         );
@@ -99,7 +100,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 current_player,
                 screen_width() - UI_OFFSET as f32 / 2. - text_size3.width / 2.,
-                screen_height() - 450.,
+                text_size1.height + text_size2.height + 200.,
                 font_size3,
                 RED,
                 );
@@ -109,7 +110,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 current_player,
                 screen_width() - UI_OFFSET as f32 / 2. - text_size3.width / 2.,
-                screen_height() - 450.,
+                text_size1.height + text_size2.height + 200.,
                 font_size3,
                 BLUE,
                 );
@@ -119,7 +120,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 current_player,
                 screen_width() - UI_OFFSET as f32 / 2. - text_size3.width / 2.,
-                screen_height() - 450.,
+                text_size1.height + text_size2.height + 200.,
                 font_size3,
                 DARKPURPLE,
                 );
@@ -129,7 +130,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 current_player,
                 screen_width() - UI_OFFSET as f32 / 2. - text_size3.width / 2.,
-                screen_height() - 450.,
+                text_size1.height + text_size2.height + 200.,
                 font_size3,
                 RED,
                 );
@@ -139,7 +140,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 current_player,
                 screen_width() - UI_OFFSET as f32 / 2. - text_size3.width / 2.,
-                screen_height() - 450.,
+                text_size1.height + text_size2.height + 200.,
                 font_size3,
                 BLUE,
                 );
@@ -152,7 +153,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
     draw_text(
         message4,
         screen_width() - UI_OFFSET as f32 / 2. - text_size1.width / 2.,
-        screen_height() - 250.,
+        text_size1.height + text_size2.height + 400.,
         font_size4,
         BLACK,
         );
@@ -165,7 +166,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 message5,
                 screen_width() - UI_OFFSET as f32 + (UI_OFFSET as f32 - text_size5.width) / 2.,
-                screen_height() - 190.,
+                text_size1.height + text_size2.height + 450.,
                 font_size5,
                 DARKGREEN,
                 );
@@ -175,11 +176,10 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             let font_size6 = 40.;
             let text_size6 = measure_text(message6, None, font_size6 as _, 1.0);
 
-
             draw_text(
                 message6,
                 screen_width() - UI_OFFSET as f32 + (UI_OFFSET as f32 - text_size6.width) / 2.,
-                screen_height() - 190.,
+                text_size1.height + text_size2.height + 450.,
                 font_size6,
                 DARKGREEN,
                 );
@@ -189,7 +189,7 @@ pub fn render_board(current_player: &str, board_state: &[[i8; SQUARES as usize];
             draw_text(
                 message7,
                 screen_width() - UI_OFFSET as f32 + (UI_OFFSET as f32 - text_size7.width) / 2.,
-                screen_height() - 140.,
+                text_size1.height + text_size2.height + 500.,
                 font_size7,
                 DARKGREEN,
                 );
