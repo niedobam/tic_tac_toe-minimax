@@ -36,7 +36,7 @@ It is written in [Rust](https://www.rust-lang.org/) utilizing [macroquad](https:
   ```
   ### Go into repository
   ```bash
-  cd TicTacToe-minimax
+  cd tic_tac_toe-minimax
   ```
   ### Run program
   ```rust
