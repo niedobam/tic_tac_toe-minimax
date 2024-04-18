@@ -32,7 +32,7 @@ It is written in [Rust](https://www.rust-lang.org/) utilizing [macroquad](https:
 ## Build Instructions
   ### Clone this repository
   ```bash
-  git clone https://github.com/niedobam/TicTacToe-minimax
+  git clone https://github.com/niedobam/tic_tac_toe-minimax.git
   ```
   ### Go into repository
   ```bash
